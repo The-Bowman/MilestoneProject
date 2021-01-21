@@ -14,11 +14,11 @@ import java.util.List;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.MyViewHolder> {
 
-    List<Person> personList;
+    List<PersonContact> personContactList;
     Context context;
 
-    public RecycleViewAdapter(List<Person> personList, Context context) {
-        this.personList = personList;
+    public RecycleViewAdapter(List<PersonContact> personContactList, Context context) {
+        this.personContactList = personContactList;
         this.context = context;
     }
 
@@ -32,13 +32,13 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.tv_personName.setText(personList.get(position).getName());
-        holder.tv_personNumber.setText(personList.get(position).getNumber());
+        holder.tv_personName.setText(personContactList.get(position).getName());
+        holder.tv_personNumber.setText(personContactList.get(position).getPhone());
     }
 
     @Override
     public int getItemCount() {
-        return personList.size();
+        return personContactList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -50,7 +50,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             super(itemView);
             iv_personPic = itemView.findViewById(R.id.iv_personPic);
             tv_personName = itemView.findViewById(R.id.tv_personName);
-            tv_personNumber = itemView.findViewById(R.id.tv_personNumber);
+            tv_personNumber = itemView.findViewById(R.id.tv_phoneNumber);
         }
     }
 }
