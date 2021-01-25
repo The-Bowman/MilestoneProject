@@ -8,8 +8,9 @@ public abstract class BaseContact {
 
 
     public BaseContact() {
-        name = "Unknown";
-        phone = "7998765";
+        this.name = "Unknown";
+        this.phone = "7998765";
+        this.location = new Location();
     }
 
     public BaseContact(String name, String phone, Location location) {
@@ -18,34 +19,42 @@ public abstract class BaseContact {
         this.location = location;
     }
 
+    public BaseContact(String name, String phone){
+        this.name = name;
+        this.phone = phone;
+        this.location = new Location();
+    }
 
     public Location getLocation() {
+
         return location;
     }
 
     public void setLocation(Location location) {
+
         this.location = location;
     }
 
-
-
-
     public String getName() {
+
         return name;
     }
 
 
     public void setName(String name) {
+
         this.name = name;
     }
 
 
     public String getPhone() {
+
         return phone;
     }
 
 
     public void setPhone(String phone) {
+
         this.phone = phone;
     }
 

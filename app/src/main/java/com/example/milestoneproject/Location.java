@@ -2,30 +2,66 @@ package com.example.milestoneproject;
 
 public class Location {
 
-    String address;
+    String street;
+    String city;
+    String state;
+    String zip;
 
     public Location() {
 
-        address = "Unknown";
+        this.street = "";
+        this.city = "";
+        this.state = "";
+        this.zip = "";
 
     }
 
-    public Location(String address) {
-        this.address = address;
+    public Location(String street, String city, String state, String zip) {
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
     }
 
-    public String getAddress() {
-        return address;
+    public String getStreet() {
+        return street;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 
     @Override
     public String toString() {
-        return "Location{" +
-                "address='" + address + '\'' +
+        return "Address {" +
+                "street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
                 '}';
     }
 }
